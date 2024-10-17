@@ -16,16 +16,22 @@ class ReglaValidacion(ABC):
 
     def _contiene_mayuscula(self, clave) -> bool:
         for caracter in clave:
-            if caracter.isupper()
+            if caracter.isupper():
                 return True
-            return False
+        return False
 
+    def _contiene_minuscula(self, clave) -> bool:
+        for caracter in clave:
+            if caracter.islower():
+                return True
+        return False
 
-    def _contiene_minuscula(self) -> bool:
-        pass
+    def _contiene_numero(self, clave) -> bool:
+        for caracter in clave:
+            if caracter.isdigit():
+                return True
+        return False
 
-    def _contiene_numero(self) -> bool:
-        pass
 
 class ReglaValidacionGanimedes:
 
